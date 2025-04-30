@@ -924,6 +924,10 @@ video {
     height: 800px;
   }
 
+  .md\:h-\[830px\] {
+    height: 830px;
+  }
+
   .md\:justify-between {
     justify-content: space-between;
   }
