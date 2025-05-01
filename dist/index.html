@@ -111,6 +111,11 @@
                 password.innerHTML = "Passwpord cannot be empty"
                 password.style.color = '#ff0000';
                 passwordi.appendChild(password)
+            }  else if (password.value.length <= 9) {
+                let passwordError = document.createElement("p");
+                passwordError.innerHTML = "Password must be more than 9 characters";
+                passwordError.style.color = '#ff0000';
+                passwordi.appendChild(passwordError);
             }
 
             if (date.value === "") {
