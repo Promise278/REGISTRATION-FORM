@@ -7,17 +7,19 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="bg-white h-20 shadow-lg p-10 pt-4 flex md:justify-between justify-evenly">
+    <nav class="bg-white h-20 shadow-lg p-10 pt-4 flex md:justify-between justify-start md:gap-0 gap-8">
         <div>
             <h1 class="text-blue-500 text-3xl font-semibold">AuthSystem</h1>
         </div>
-        <div class="flex gap-4">
+        <div class="flex md:gap-4 gap-2">
             <button class="bg-blue-200 h-11 w-32 rounded-md text-blue-800 flex gap-2 pl-4 pt-2"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="blue"><path d="M720-400v-120H600v-80h120v-120h80v120h120v80H800v120h-80Zm-360-80q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm80-80h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0-80Zm0 400Z"/></svg><a href="./index.html">Register</a></button>
             <button class="flex gap-2 pt-2"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg><a href="./login.html">Login</a></button>
         </div>
     </nav>
-    <div class="bg-blue-50 w-full md:h-[830px] h-screen pt-4">
-        <div class="bg-white rounded-md w-[420px] mt-4 h-[740px] md:ml-[450px] ml-20">
+
+    <div class="bg-blue-50 w-full md:h-[950px] h-screen pt-4">
+        <div id="items" class="pl-6"></div>
+        <div class="bg-white rounded-md w-[420px] mt-4 h-[740px] md:ml-[450px] ml-12">
             <div class="flex gap-4 justify-center pt-8">
                 <div class="rounded-full bg-blue-100 w-14 h-14 pl-3 pt-2"><svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="blue"><path d="M720-400v-120H600v-80h120v-120h80v120h120v80H800v120h-80Zm-360-80q-66 0-113-47t-47-113q0-66 47-113t113-47q66 0 113 47t47 113q0 66-47 113t-113 47ZM40-160v-112q0-34 17.5-62.5T104-378q62-31 126-46.5T360-440q66 0 130 15.5T616-378q29 15 46.5 43.5T680-272v112H40Zm80-80h480v-32q0-11-5.5-20T580-306q-54-27-109-40.5T360-360q-56 0-111 13.5T140-306q-9 5-14.5 14t-5.5 20v32Zm240-320q33 0 56.5-23.5T440-640q0-33-23.5-56.5T360-720q-33 0-56.5 23.5T280-640q0 33 23.5 56.5T360-560Zm0-80Zm0 400Z"/></svg></div>
                 <h2 class="font-semibold text-3xl pt-3">Create Account</h2>
@@ -25,14 +27,14 @@
             <div class="mt-6">
                 <form class="ml-12">
                     <label for="name">Full Name</label><br>
-                    <input class="border-[2px] mt-2 rounded-md h-10 w-80 pl-2" type="text" placeholder="Enter Your FullName"><br>
+                    <input id="fill1" class="border-[2px] mt-2 rounded-md h-10 w-80 pl-2" type="text" placeholder="Enter Your FullName"><br>
                     <label for="email">Email Address</label><br>
-                    <input class="border-[2px] mt-2 rounded-md h-10 w-80 pl-2" type="text" placeholder="info@gmail.com"><br>
+                    <input id="fill2" class="border-[2px] mt-2 rounded-md h-10 w-80 pl-2" type="text" placeholder="info@gmail.com"><br>
                     <label for="No">Phone No:</label><br>
-                    <input class="border-[2px] mt-2 rounded-md h-10 w-80 pl-2" type="tel" placeholder="+234 9167285674"><br>
+                    <input id="fill3" class="border-[2px] mt-2 rounded-md h-10 w-80 pl-2" type="tel" placeholder="+234 9167285674"><br>
                     <label for="PassWord">PassWord:</label><br>
                     <div class="flex gap-4">
-                        <input class="border-[2px] mt-2  rounded-md h-10 w-80 pl-2" type="password" placeholder="Input your Password"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z"/></svg><br>
+                        <input id="fill4" class="border-[2px] mt-2  rounded-md h-10 w-80 pl-2" type="password" placeholder="Input your Password"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z"/></svg><br>
                     </div>
                     <div class="text-gray-400 text-sm">
                         <p>Password must contain:</p>
@@ -45,14 +47,45 @@
                         </ul>
                     </div>
                     <label for="Date">Date Of Birth:</label><br>
-                    <input class="border-[2px] mt-2 rounded-md h-10 w-80 pl-2" type="date">
+                    <input  id="fill5" class="border-[2px] mt-2 rounded-md h-10 w-80 pl-2" type="date">
                     <p class="text-gray-500 text-sm">You must be at least 18 years old</p>
                 </form>
-                <button class="ml-12 mt-4 rounded-md h-12 w-80 bg-blue-400 text-white text-2xl flex gap-4 pl-28 pt-2">Register<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg></button>
+                <button id="submit" class="ml-12 mt-4 rounded-md h-12 w-80 bg-blue-400 text-white text-2xl flex gap-4 pl-28 pt-2">Register<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg></button>
             </div>
             <p class="text-center pt-2">Already have an account? <a class="text-blue-500" href="./login.html">Sign in</a></p>
         </div>
-        <p class="text-center pt-2 text-2xl"><a href="https://github.com/Promise278/REGISTRATION-FORM">Link to Github</a></p>
+        <p class="md:text-center text-start md:pl-0 pl-8 pt-2 text-2xl"><a href="https://github.com/Promise278/REGISTRATION-FORM">Link to Github</a></p>
     </div>
+
+    <script>
+        let button = document.getElementById("submit")
+        let content = document.getElementById("items")
+        let FullName = document.querySelector("#fill1")
+        let Email = document.querySelector("#fill2")
+        let phone = document.querySelector("#fill3")
+        let password = document.querySelector("#fill4")
+        let date = document.querySelector("#fill5")
+        
+
+
+
+        button.addEventListener("click", () => {
+            let items = document.createElement("p")
+            items.innerHTML = `<p class="text-3xl text-purple-500">DETAILS SHOWN BELOW<p><p>My Name is <span>${fill1.value}</span></p> <p>My Email is ${fill2.value}</p> <p>My PhoneNo is ${fill3.value}</p> <p>My Password is ${fill4.value}</p> <p>My Birthday is ${fill5.date}</p>`
+            content.appendChild(items)
+
+            // if (fill4.length < 9 ) {
+            //     alert("Password must be greater than 9 letters please")
+            // }else if (password.length > 9) {
+            //     console.log("password is greatter than 9")
+            // }
+
+            // if (FullName.textContent === "") {
+            //     alert("FullName cannot be empty")
+            // } else if(FullName.textContent == fill1.value){
+            //     console.log(`here is your fullname ${fill1.value}`)
+            // }
+        })
+    </script>
 </body>
 </html>

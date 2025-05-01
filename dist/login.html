@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="bg-white h-20 shadow-lg p-10 pt-4 flex md:justify-between justify-evenly">
+    <nav class="bg-white h-20 shadow-lg p-10 pt-4 flex md:justify-between justify-start md:gap-0 gap-8">
         <div>
             <h1 class="text-blue-500 text-3xl font-semibold">AuthSystem</h1>
         </div>
@@ -16,7 +16,9 @@
             <button class="flex gap-2 pt-2"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg><a href="./login.html">Login</a></button>
         </div>
     </nav>
+
     <div class="bg-blue-50 w-full md:h-[800px] h-screen pt-14">
+        <div id="items" class="pl-4"></div>
         <div class="bg-white rounded-md w-[420px] mt-10 h-[400px] md:ml-[450px] ml-10">
             <div class="flex gap-4 justify-center pt-5">
                 <div class="rounded-full bg-blue-100 w-14 h-14 pl-2 pt-3"><svg xmlns="http://www.w3.org/2000/svg" height="34px" viewBox="0 -960 960 960" width="34px" fill="#000000"><path d="M480-120v-80h280v-560H480v-80h280q33 0 56.5 23.5T840-760v560q0 33-23.5 56.5T760-120H480Zm-80-160-55-58 102-102H120v-80h327L345-622l55-58 200 200-200 200Z"/></svg></div>
@@ -25,17 +27,32 @@
             <div class="mt-6">
                 <form class="ml-12">
                     <label for="email">Email Address</label><br>
-                    <input class="border-[2px] mt-2 rounded-md h-10 w-80 pl-2" type="text" placeholder="info@gmail.com"><br>
+                    <input id="emailaccount" class="border-[2px] mt-2 rounded-md h-10 w-80 pl-2" type="text" placeholder="info@gmail.com"><br>
                     <label for="PassWord">PassWord:</label><br>
                     <div class="flex gap-4">
-                        <input class="border-[2px] mt-2  rounded-md h-10 w-80 pl-2" type="password" placeholder="Input your Password"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z"/></svg><br>
+                        <input id="passwordinfo" class="border-[2px] mt-2  rounded-md h-10 w-80 pl-2" type="password" placeholder="Input your Password"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#000000"><path d="M480-320q75 0 127.5-52.5T660-500q0-75-52.5-127.5T480-680q-75 0-127.5 52.5T300-500q0 75 52.5 127.5T480-320Zm0-72q-45 0-76.5-31.5T372-500q0-45 31.5-76.5T480-608q45 0 76.5 31.5T588-500q0 45-31.5 76.5T480-392Zm0 192q-146 0-266-81.5T40-500q54-137 174-218.5T480-800q146 0 266 81.5T920-500q-54 137-174 218.5T480-200Zm0-300Zm0 220q113 0 207.5-59.5T832-500q-50-101-144.5-160.5T480-720q-113 0-207.5 59.5T128-500q50 101 144.5 160.5T480-280Z"/></svg><br>
                     </div>
                 </form>
-                <button class="ml-12 mt-4 rounded-md h-12 w-80 bg-blue-400 text-white text-2xl flex gap-4 pl-28 pt-2">Sign In<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg></button>
+                <button id="sigin" class="ml-12 mt-4 rounded-md h-12 w-80 bg-blue-400 text-white text-2xl flex gap-4 pl-28 pt-2">Sign In<svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="white"><path d="m560-240-56-58 142-142H160v-80h486L504-662l56-58 240 240-240 240Z"/></svg></button>
             </div>
             <p class="text-center pt-2">Don't have an account? <a class="text-purple-500" href="./index.html">Register now</a></p>
         </div>
-        <p class="text-center pt-2 text-2xl"><a href="https://github.com/Promise278/REGISTRATION-FORM">Link to Github</a></p>
+        <p class="md:text-center text-start md:pl-0 pl-8 pt-2 text-2xl"><a href="https://github.com/Promise278/REGISTRATION-FORM">Link to Github</a></p>
     </div>
+
+    <script>
+        let button = document.getElementById("sigin")
+        let content = document.getElementById("items")
+        let Email = document.querySelector("#emailaccount")
+        let password = document.querySelector("#passwordinfo")
+
+
+
+        button.addEventListener("click", () => {
+            let item = document.createElement("p")
+            item.innerHTML = `<p class="text-3xl">DETAILS SHOWN BELOW<p><p>My Email is ${emailaccount.value}</p>  <p>My Password is ${passwordinfo.value}</p>`
+            content.appendChild(item)
+        })
+    </script>
 </body>
 </html>
